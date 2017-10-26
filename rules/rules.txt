@@ -1,0 +1,42 @@
+begin Regular Expressin with /, end with /g
+/Regex Goes Here/g
+to escape '/', preceed with \,
+so you cna lookup '/folerName/' with : /\/folderNme\//g
+
+JavaScript:
+using in a file:
+let str = "robbery in Texas";
+let target = str.match(/[A-Z][a-z]{4}/g);//returns array of matches
+console.log(target);//prints out '[ "Texas" ]'
+
+Some common rules:
+[range of queries in square brackets]
+{number of repetition}
+/[0-9]/g : matches all numbers 0 to 9
+/[0-8]{3}/g : matches all tripplets of numbers 0-8
+/[a-zA-Z]{2,6}/g : matches all strings between lengths 2 and 6 made of only lowercase and uppercase letters.
+
+? makes a match optional (same as {1,0})
+\ escapes characters
+
+/S?s?erpant/g : will match 'Serpant' or 'serpant'
+/here\swe\go/g : will match 'here we go'
+. will match any character, you need to escape (\.) to match period
+
+$ starts at the end of the word
+
+/fun$/g : used on "fun is fun is fun" will only match the last 'fun'
+^ matches at the begining
+/^fun/g : used on "fun is fun is fun" will only match the first 'fun'
+/^fun$/g : will only match a string that is exactle 'fun'
+
++ is the same as {1,}
+* is the same as {0,}
+
+
+More Resources:
+
+https://www.w3schools.com/jsref/jsref_regexp_test.asp
+
+http://www.webreference.com/js/column5/rules.html
+
